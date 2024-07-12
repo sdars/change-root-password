@@ -17,7 +17,7 @@ SCRIPT_PATH="$WORK_DIR/change_root_password.sh"
 TEMP_SCRIPT_PATH="$WORK_DIR/temp_change_root_password.sh"
 
 # 下载最新的脚本
-curl -s https://api.github.com/repos/ypq123456789/change-root-password/contents/change_root_password.sh | jq -r .content | base64 -d > "$TEMP_SCRIPT_PATH"
+curl -s https://api.github.com/repos/sdars/change-root-password/contents/change_root_password.sh | jq -r .content | base64 -d > "$TEMP_SCRIPT_PATH"
 
 # 比较版本号
 NEW_VERSION=$(grep "^VERSION=" "$TEMP_SCRIPT_PATH" | cut -d'"' -f2)
